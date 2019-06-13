@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    weak var tableView  = UITableView ()
+    @IBOutlet weak var tableView: UITableView!
     var StringArray = [Int]()
     
 
@@ -23,15 +23,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
     }
+    //TableViewDataSource
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     //TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StringArray.count;
+        return 10;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell  = self.tableView?.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
-        cell.textLabel?.text = "hari"
+        let cell :HomeCellVC =  tableView.dequeueReusableCell(withIdentifier: "homeCellVC", for: indexPath) as! HomeCellVC
+       // let cell : UITableViewCell  = self.tableView?.dequeueReusableCell(withIdentifier: "homeCellVC") as! HomeCellVC
+        
+        cell.nameLbl?.text = "Hari On Nama shivaya!!!"
         return cell
     }
     

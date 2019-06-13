@@ -13,6 +13,7 @@
 		13C29BAE22B12EF70094D172 /* SwiftSamples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C29BAC22B12EF70094D172 /* SwiftSamples.xcdatamodeld */; };
 		13C29BB022B12F080094D172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C29BAF22B12F080094D172 /* Assets.xcassets */; };
 		13C29BB322B12F080094D172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C29BB122B12F080094D172 /* LaunchScreen.storyboard */; };
+		479D5E3422B1DF3800205FFB /* HomeCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D5E3322B1DF3800205FFB /* HomeCellVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		13C29BAF22B12F080094D172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13C29BB222B12F080094D172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13C29BB422B12F080094D172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479D5E3322B1DF3800205FFB /* HomeCellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				13C29BA522B12EF70094D172 /* AppDelegate.swift */,
 				13C29BA722B12EF70094D172 /* ViewController.swift */,
+				479D5E3322B1DF3800205FFB /* HomeCellVC.swift */,
 				13C29BA922B12EF70094D172 /* Main.storyboard */,
 				13C29BAF22B12F080094D172 /* Assets.xcassets */,
 				13C29BB122B12F080094D172 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C29BA822B12EF70094D172 /* ViewController.swift in Sources */,
+				479D5E3422B1DF3800205FFB /* HomeCellVC.swift in Sources */,
 				13C29BAE22B12EF70094D172 /* SwiftSamples.xcdatamodeld in Sources */,
 				13C29BA622B12EF70094D172 /* AppDelegate.swift in Sources */,
 			);
