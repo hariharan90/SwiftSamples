@@ -22,31 +22,34 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellVC" rowHeight="100" id="gpw-Sz-8Sy" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellVC" rowHeight="382" id="gpw-Sz-8Sy" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="382"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gpw-Sz-8Sy" id="oVf-Fh-Rux" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="381.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzZ-hw-FDc">
-                                                    <rect key="frame" x="137.5" y="39.5" width="100" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fdi-Md-FbG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="qTa-2H-EKb"/>
+                                                        <constraint firstAttribute="height" constant="216" id="Mv3-3O-xJR"/>
                                                     </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-cc-XGS">
+                                                    <rect key="frame" x="145" y="273" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.95572060349999999" green="0.46477019790000001" blue="0.055941067640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="OzZ-hw-FDc" firstAttribute="centerY" secondItem="oVf-Fh-Rux" secondAttribute="centerY" id="2f7-ZA-1Uj"/>
-                                                <constraint firstItem="OzZ-hw-FDc" firstAttribute="centerX" secondItem="oVf-Fh-Rux" secondAttribute="centerX" id="sbH-kl-6LC"/>
+                                                <constraint firstItem="Fdi-Md-FbG" firstAttribute="leading" secondItem="oVf-Fh-Rux" secondAttribute="leading" id="FGF-QZ-V5h"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fdi-Md-FbG" secondAttribute="trailing" id="eAn-2h-VI9"/>
+                                                <constraint firstItem="Fdi-Md-FbG" firstAttribute="top" secondItem="oVf-Fh-Rux" secondAttribute="top" id="pIj-vU-uYq"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLbl" destination="OzZ-hw-FDc" id="cpu-6j-jBt"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
