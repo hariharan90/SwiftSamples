@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellVC" rowHeight="382" id="gpw-Sz-8Sy" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="382"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellVC" rowHeight="350" id="gpw-Sz-8Sy" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gpw-Sz-8Sy" id="oVf-Fh-Rux" customClass="HomeCellVC" customModule="SwiftSamples" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="381.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="349.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fdi-Md-FbG">
@@ -35,8 +35,8 @@
                                                         <constraint firstAttribute="height" constant="216" id="Mv3-3O-xJR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-cc-XGS">
-                                                    <rect key="frame" x="145" y="273" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-cc-XGS">
+                                                    <rect key="frame" x="0.0" y="218" width="375" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -49,6 +49,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="Fdi-Md-FbG" secondAttribute="trailing" id="eAn-2h-VI9"/>
                                                 <constraint firstItem="Fdi-Md-FbG" firstAttribute="top" secondItem="oVf-Fh-Rux" secondAttribute="top" id="pIj-vU-uYq"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="nameLbl" destination="ecS-cc-XGS" id="tzM-2g-dEi"/>
+                                            </connections>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,6 +73,9 @@
                     <navigationItem key="navigationItem" id="kGe-8b-Vz5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vks-he-90Z">
                             <color key="tintColor" red="0.87450980389999999" green="0.87563550469999996" blue="0.87565046550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveToDb" destination="BYZ-38-t0r" id="ltQ-kF-IQ9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

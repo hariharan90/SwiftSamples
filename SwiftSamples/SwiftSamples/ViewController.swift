@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     //TableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 350
     }
     
     //TableView
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func fetchFromDb(){
-        guard  let appdelgate : AppDelegate = UIApplication.shared.delegate as! AppDelegate else {return}
+        guard  let appdelgate : AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let manageContext = appdelgate.persistentContainer.viewContext
         
         let fetchRequest  = NSFetchRequest<NSFetchRequestResult>(entityName: "Albums")
@@ -54,9 +54,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do{
             let albums = try!manageContext.fetch(fetchRequest)
             for data in albums as! [NSManagedObject]{
-                name.append(data.value(forKey: "title") as! String) as! String
+                name.append(data.value(forKey: "title") as! String)
             }
+            self.tableView.reloadData()
             
+        }
+        catch let error as NSError{
+            print("\(error.userInfo)")
+        }
+        
+       
+    }
+    
+    @IBAction func saveToDb(){
+        guard let appdelgate:AppDelegate = UIApplication.shared.delegate as! AppDelegate else {
+            return
+        }
+        let manageContext = appdelgate.persistentContainer.viewContext
+        
+        let albumEntity = NSEntityDescription.entity(forEntityName: "Albums", in: manageContext)
+        
+        let album = NSManagedObject.init(entity: albumEntity!, insertInto: manageContext)
+        album.setValue("Blank Space", forKey: "title")
+        album.setValue("Taylor", forKey: "lyrics")
+        album.setValue(5, forKey: "star")
+        album.setValue("thumbnail", forKey: "thumnail")
+        album.setValue("Taylor Swift", forKey: "author")
+        
+        do {
+            try manageContext.save()
+        }
+        catch let error as NSError{
+            print("\(error) , \(error.userInfo)")
         }
     }
     
